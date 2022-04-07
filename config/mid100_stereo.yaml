@@ -3,7 +3,7 @@
 BaseLiDARNumber: 1 # middle LiDAR of MID-100
 ExtLiDARNumber1: 0 # left LiDAR of MID-100
 ExtLiDARNumber2: 2 # right LiDAR of MID-100
-LiDARFilesPath: "/home/sam/catkin_ws/src/mlcc/scene2/"
+LiDARFilesPath: "/home/sunxy/workspace/catkin_ws/src/mlcc/scene2/"  # relative path from /home/sunxy/workspace/catkin_ws/
 ExtrinsicNumber: 2 # total number of extrinsics to be calibrated
 
 # Initial extrinsic (usually provided by hand measurement or cad design)

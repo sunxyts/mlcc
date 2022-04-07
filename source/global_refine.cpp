@@ -4,7 +4,7 @@
 #include <unordered_map>
 
 #include "mypcl.hpp"
-#include "global.hpp"
+#include "global_refine.hpp"
 
 using namespace std;
 using namespace Eigen;

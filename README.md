@@ -51,6 +51,17 @@ roslaunch mlcc pose_refine.launch
 ```
 
 Step 2: LiDAR extrinsic optimization (the initial extrinsic is stored in `config/init_extrinsic`)
+
+!!! Attention
+Please input the initial extrinsic value to ref.json in the corresponding
+scene folder, e.g., scene2/ref.json. The calibrated value will also be written
+to the same scene2/ref.json file.
+Currently we could only refine the extrinsic of one LiDAR at each time.
+If multiple LiDARs need to be calibrated, you need to refine them one by one.
+When all extrinsic values are refined, you could paste them together to the
+ref.json file and feed them to the global optimization in next step.
+!!! Attention
+
 ```
 roslaunch mlcc extrinsic_refine.launch
 ```
@@ -60,6 +71,9 @@ Step 3: pose and extrinsic joint optimization
 roslaunch mlcc global_refine.launch
 ```
 ### 3.2 LiADR-Camera Extrinsic Calibration
+
+!!! Attention
+Please modify mlcc/config/*_stereo.yaml "LiDARFilesPath" segment to real absolute path
 ```
 roslaunch mlcc calib_camera.launch
 ```
